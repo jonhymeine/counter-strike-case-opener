@@ -1,6 +1,6 @@
-# Counter Strike Case Opener
+# Counter Strike Case Simulator
 
-This project is going to be a Counter Strike case opener simulator, initially developing with Vite, React.js, Node.js, Typescript and TailwindCSS.
+This project is going to be a Counter Strike case simulator, initially developing with Vite, React.js, Node.js, Typescript and TailwindCSS.
 
 ## Probably features for the future:
 
