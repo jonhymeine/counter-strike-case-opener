@@ -7,7 +7,7 @@ function ItemPool() {
         items.push(<Item key={`Item${i}`} />);
     }
     return (
-        <div className="p-4 grid gap-x-8 gap-y-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 overflow-y-auto">
+        <div className="p-4 pb-0 grid gap-x-8 gap-y-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 overflow-y-auto">
             {items.map(item => item)}
         </div>
     );
