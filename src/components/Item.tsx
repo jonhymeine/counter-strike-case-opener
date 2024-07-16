@@ -1,7 +1,6 @@
-import '../index.css';
-import weaponSkin from '../assets/images//cases/nightmare_case/nightwish.png';
+import weaponSkin from '../assets/images//cases/nightmare_case/nightwish.png'
 
-function Item() {
+const Item = () => {
   return (
     <div className="w-full h-full">
       <div className="h-40 bg-gradient-to-b from-20% from-zinc-600 to-90% to-zinc-400">
@@ -12,7 +11,7 @@ function Item() {
         <p className="text-white">Nightwish</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default Item;
+export default Item 

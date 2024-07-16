@@ -1,24 +1,22 @@
-import '../../index.css';
-
 type Item = {
-  name: string;
-  image: string;
-};
+  name: string
+  image: string
+}
 
 type DropdownButtonProps = {
-  buttonRef: React.RefObject<HTMLButtonElement>;
-  active: boolean;
-  setActive: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedItem: Item;
-  direction: string;
-};
+  buttonRef: React.RefObject<HTMLButtonElement>
+  active: boolean
+  setActive: React.Dispatch<React.SetStateAction<boolean>>
+  selectedItem: Item
+  direction: string
+}
 
-function DropdownButton({ buttonRef, active, setActive, selectedItem, direction }: DropdownButtonProps) {
-  let directionStyleOnActive = 'bg-zinc-900 ';
+export const DropdownButton = ({ buttonRef, active, setActive, selectedItem, direction }: DropdownButtonProps) => {
+  let directionStyleOnActive = 'bg-zinc-900 '
   if (direction == 'up') {
-    directionStyleOnActive += 'rounded-t-none';
+    directionStyleOnActive += 'rounded-t-none'
   } else if (direction == 'down') {
-    directionStyleOnActive += 'rounded-b-none';
+    directionStyleOnActive += 'rounded-b-none'
   }
 
   return (
@@ -31,7 +29,5 @@ function DropdownButton({ buttonRef, active, setActive, selectedItem, direction 
       <img src={selectedItem.image} className="h-12" />
       <span className="material-symbols-rounded ms-auto">{active ? 'arrow_drop_down' : 'arrow_drop_up'}</span>
     </button>
-  );
+  )
 }
-
-export default DropdownButton;

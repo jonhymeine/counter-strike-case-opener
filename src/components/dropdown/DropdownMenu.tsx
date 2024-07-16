@@ -1,31 +1,29 @@
-import '../../index.css';
-
 type Item = {
-  name: string;
-  image: string;
-};
+  name: string
+  image: string
+}
 
 type DropdownMenuProps = {
-  dropdownRef: React.RefObject<HTMLDivElement>;
-  active: boolean;
-  direction: string;
-  items: Item[];
-  setSelectedItem: React.Dispatch<React.SetStateAction<Item>>;
-};
+  dropdownRef: React.RefObject<HTMLDivElement>
+  active: boolean
+  direction: string
+  items: Item[]
+  setSelectedItem: React.Dispatch<React.SetStateAction<Item>>
+}
 
-function DropdownMenu({ dropdownRef, active, direction, items, setSelectedItem }: DropdownMenuProps) {
-  let directionMenuStyle = '';
+export const DropdownMenu = ({ dropdownRef, active, direction, items, setSelectedItem }: DropdownMenuProps) => {
+  let directionMenuStyle = ''
   if (direction == 'up') {
-    directionMenuStyle = 'bottom-0 -translate-y-16 rounded-b-none border-b';
+    directionMenuStyle = 'bottom-0 -translate-y-16 rounded-b-none border-b'
   } else if (direction == 'down') {
-    directionMenuStyle = 'top-0 translate-y-16 rounded-t-none border-t';
+    directionMenuStyle = 'top-0 translate-y-16 rounded-t-none border-t'
   }
 
-  let directionButtonStyle = '';
+  let directionButtonStyle = ''
   if (direction == 'up') {
-    directionButtonStyle = 'first:hover:rounded-t-md';
+    directionButtonStyle = 'first:hover:rounded-t-md'
   } else if (direction == 'down') {
-    directionButtonStyle = 'last:hover:rounded-b-md';
+    directionButtonStyle = 'last:hover:rounded-b-md'
   }
 
   return (
@@ -43,7 +41,5 @@ function DropdownMenu({ dropdownRef, active, direction, items, setSelectedItem }
         </button>
       ))}
     </div>
-  );
+  )
 }
-
-export default DropdownMenu;

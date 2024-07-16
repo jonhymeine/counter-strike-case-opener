@@ -1,14 +1,13 @@
-import './index.css';
-import Header from './components/Header';
-import Container from './components/Container';
+import Header from './components/Header'
+import Container from './components/Container'
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
       <Container />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
